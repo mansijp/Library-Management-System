@@ -1,0 +1,7 @@
+pip
+fastapi
+uvicorn[standard]
+google-cloud-firestore
+firebase-admin
+python-dotenv
+pydantic
