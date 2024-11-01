@@ -1,4 +1,5 @@
 pip
+flask
 fastapi
 uvicorn[standard]
 google-cloud-firestore

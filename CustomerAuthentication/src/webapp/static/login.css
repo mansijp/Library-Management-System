@@ -1,0 +1,17 @@
+body {
+    background: blue;
+}
+
+.input-area {
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+#login-btn {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+#response {
+    font-color: blue;
+}
