@@ -2,13 +2,14 @@ import os
 from flask import Flask, render_template, request, url_for, redirect, session
 
 base_dir = os.path.abspath(os.path.dirname(__file__))
-folder = os.path.join(base_dir, '../webapp/templates')
+templates_folder = os.path.join(base_dir, '../webapp/templates')
+static_folder = os.path.join(base_dir, '../webapp/static')
 
-app = Flask(__name__, template_folder=folder)
+app = Flask(__name__, template_folder=templates_folder, static_folder=static_folder)
 
-# Secret key for session encryption
-app.secret_key = 'your_secret_key_here'  # Replace with a secure secret key in production
+app.secret_key = 'temporary_test_session_microservice1'
 
+# hardcoded but to be integrated with mongoDB
 USERNAME = "john"
 PASSWORD = "doe"
 

@@ -7,27 +7,24 @@
     <title>Login</title>
 </head>
 <body>
-    <h2>Welcome! Please log in below: </h2>
+    <div>
+        <h2>Welcome! Please log in below:</h2>
 
-    <!-- If user is already logged in, show a message -->
-    {% if session.get('username') %}
-        <h3>You are already logged in as {{ session['username'] }}.
-            <a href="{{ url_for('dashboard') }}">Go to your dashboard</a>.</h3>
-    {% else %}
-        <div>
+        {% if session.get('username') %}
+            <h3>You are already logged in as {{ session['username'] }}.
+                <a href="{{ url_for('dashboard') }}">Go to your dashboard</a>.</h3>
+        {% else %}
             <form action="/login" method="post">
-                <p>Username: </p>
                 <input class="input-area" type="text" name="username" placeholder="Enter Username" required />
-                <p>Password: </p>
                 <input class="input-area" type="password" name="password" placeholder="Enter Password" required />
-                <br/><br/>
-                <button id="login-btn" type="submit">Login</button>
-                <br/>
-                <h2>{{ message }}</h2>
 
-                <h5><i>Username= john <br/> Password= doe</i></h5>
+                <button id="login-btn" type="submit">Login</button>
+
+                <h2 class="message">{{ message }}</h2>
+
+                <h5><i>Username = john <br/> Password = doe</i></h5>
             </form>
-        </div>
-    {% endif %}
+        {% endif %}
+    </div>
 </body>
 </html>
